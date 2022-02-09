@@ -102,7 +102,7 @@ namespace api_aurora.Controllers
 
         private bool StudentDetailExists(int id)
         {
-            var sutdentDetail = _contextRW.StudentDetails.FirstOrDefaultAsync(i => i.ID == id);
+            var sutdentDetail = _contextRO.StudentDetails.FirstOrDefaultAsync(i => i.ID == id);
             if (sutdentDetail == null)
                 return false;
             else
